@@ -1,0 +1,48 @@
+package testmain;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+
+
+import entities.Todo;
+
+public class App {
+
+
+		public static SessionFactory factory;
+		public static void main(String[] args) {
+		
+					
+				factory = new Configuration().configure().buildSessionFactory();
+				
+				Session session = factory.openSession();
+				Transaction t5 = session.beginTransaction();
+				
+			
+				Todo t1 = new Todo();
+				t1.setId(1);
+				t1.setSummary("emppre");
+				t1.setDescription("seghjcgs");
+				
+				Todo t2 = new Todo();
+				t1.setId(2);
+				t1.setSummary("hifhiskf");
+				t1.setDescription("jkshkfhs");
+				
+				Todo t3 = new Todo();
+				t1.setId(3);
+				t1.setSummary("fzgjzkhjze");
+				t1.setDescription("zegfgzkfjf");
+				
+				
+				
+				session.persist(t1);
+				session.persist(t3);
+				session.persist(t4);
+				t5.commit();
+				
+				
+}
+		}

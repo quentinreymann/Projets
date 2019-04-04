@@ -1,0 +1,12 @@
+package com.adaming.bean;
+
+import javax.faces.context.FacesContext;
+
+public class PaysBean {
+
+
+public String validationVille(){
+	FacesContext.getCurrentInstance().getExternalContext().getFlash().put("ville", city);
+	return "hotels";
+
+}}

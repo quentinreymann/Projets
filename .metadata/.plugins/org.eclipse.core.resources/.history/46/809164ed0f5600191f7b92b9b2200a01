@@ -1,0 +1,64 @@
+package com.TP2.test;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+
+import com.TP2.entities.Employer;
+import com.TP2.entities.Adresse;
+import com.TP2.entities.Projet;
+
+
+
+public class Main {
+	
+	public static SessionFactory factory;
+	public static void main(String[] args) {
+		
+				
+			factory = new Configuration().configure().buildSessionFactory();
+			
+			Session session = factory.openSession();
+			Transaction t = session.beginTransaction();
+
+			
+			
+			
+			
+			
+			
+			
+			
+
+			t.commit();
+	}
+	
+	private static void createEmp(Session session, String nom, String prenom, int age) {
+		Employer e = new Employer();
+		e.setNom(nom);
+		e.setPrenom(prenom);
+		e.setAge(age);
+		session.persist(e);
+	}
+		
+	private static void createAd(Session session, String rue, String ville, int codePostale) {
+		Adresse a = new Adresse();
+		a.setRue(rue);
+		a.setVille(ville);
+		a.setCodePostale(codePostale);
+		session.persist(a);
+	}
+	
+	private static void createProj(Session session, String nom) {
+		Projet p = new Projet();
+		p.setNom(nom);;
+		session.persist(p);
+	}
+	
+	private static void createEquipe(Session session, String nom) {
+		Equipe eq = new Equipe();
+		eq.setNom(nom);;
+		session.persist(eq);
+	}
+}

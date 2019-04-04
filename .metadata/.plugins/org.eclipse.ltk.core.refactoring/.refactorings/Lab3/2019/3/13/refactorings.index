@@ -1,0 +1,11 @@
+1553596366821	Delete element
+1553597291855	Delete element
+1553597409622	Delete element
+1553598291098	Rename resource 'index.jsp'
+1553604948644	Move 'high-balance.xhtml' to 'WebContent'
+1553604951031	Move 'negative-balance.xhtml' to 'WebContent'
+1553604952839	Move 'normal-balance.xhtml' to 'WebContent'
+1553604955091	Move 'unknown-customer.xhtml' to 'WebContent'
+1553604957170	Move 'web.xml' to 'WebContent'
+1553604959406	Move 'wrong-password.xhtml' to 'WebContent'
+1553604981876	Move 'web.xml' to 'WEB-INF'

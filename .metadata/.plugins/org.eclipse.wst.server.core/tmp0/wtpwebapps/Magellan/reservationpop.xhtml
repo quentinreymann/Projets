@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:b="http://bootsfaces.net/ui"
+    xmlns:f="http://xmlns.jcp.org/jsf/core"
+    xmlns:p="http://primefaces.org/ui" xmlns:a4j="http://richfaces.org/a4j"
+    xmlns:ui="http://java.sun.com/jsf/facelets">
+<h:head>
+
+<title>Insert title here</title>
+<style type="text/css">
+    .value {
+        font-weight: bold;
+    }
+</style>
+<style>               
+        .Bimage{background-image:url("resources/autre/beach2.jpg"); }
+
+</style>
+</h:head>
+<h:body styleClass="Bimage" style="color:white">
+<script type="text/javascript">
+    function handleLoginRequest(xhr, status, args) {
+        if(args.validationFailed || !args.loggedIn) {
+            PF('dlg').jq.effect("shake", {times:5}, 100);
+        }
+        else {
+            PF('dlg').hide();
+            $('#loginLink').fadeOut();
+        }
+    }
+</script>
+<script type="text/javascript">    
+    PrimeFaces.locales['de'] = {
+        closeText: 'Schließen',
+        prevText: 'Zurück',
+        nextText: 'Weiter',
+        monthNames: ['Januar', 'Februar', 'März', 'April', 'Mai', 'Juni', 'Juli', 'August', 'September', 'Oktober', 'November', 'Dezember'],
+        monthNamesShort: ['Jan', 'Feb', 'März', 'Apr', 'Mai', 'Jun', 'Jul', 'Aug', 'Sep', 'Okt', 'Nov', 'Dez'],
+        dayNames: ['Sonntag', 'Montag', 'Dienstag', 'Mittwoch', 'Donnerstag', 'Freitag', 'Samstag'],
+        dayNamesShort: ['Son', 'Mon', 'Die', 'Mit', 'Don', 'Fre', 'Sam'],
+        dayNamesMin: ['S', 'M', 'D', 'M ', 'D', 'F ', 'S'],
+        weekHeader: 'Woche',
+        FirstDay: 1,
+        isRTL: false,
+        showMonthAfterYear: false,
+        yearSuffix: '',
+        timeOnlyTitle: 'Nur Zeit',
+        timeText: 'Zeit',
+        hourText: 'Stunde',
+        minuteText: 'Minute',
+        secondText: 'Sekunde',
+        currentText: 'Aktuelles Datum',
+        ampm: false,
+        month: 'Monat',
+        week: 'Woche',
+        day: 'Tag',
+        allDayText: 'Ganzer Tag'
+    };
+</script>
+ 
+ 
+ <script type="text/javascript" src="monscript.js">
+ if(id="ce")
+	 int prix=25;
+ </script>
+
+
+ <div align="center">
+ <br /><br /><br /><br /><br /><br /><br />
+<h:form>
+	<h3 style="color:wheat" align="center"><font size="7"><font face="Verdana"> Réservation :</font></font></h3>
+    <h:outputLink value="javascript:void(0)" onclick="PF('dlg').show();" title="Reservation">
+            </h:outputLink>
+     
+    <p:growl id="growl" sticky="true" showDetail="true" life="3000" />
+     
+    <p:dialog header="Login" widgetVar="dlg" resizable="false">
+
+    </p:dialog>    
+
+    <p:growl id="msgs" showDetail="true" />
+     
+    <h:panelGrid columns="2" cellpadding="5">
+                 <h:outputLabel for="nom" value="Nom:" />
+            <p:inputText id="nom" value="#{reservationBean.nom}" required="true" label="nom" />
+             
+            <h:outputLabel for="prenom" value="Prenom:" />
+            <p:inputText id="prenom" value="#{reservationBean.prenom}" required="true" label="prenom" />
+              
+               <h:outputLabel for="address" value="Adresse email:" />
+            <p:inputText id="address" value="#{reservationBean.address}" required="true" label="address">
+            <f:validateRegex pattern="[\w\.-]*[a-zA-Z0-9_]@[\w\.-]*[a-zA-Z0-9]\.[a-zA-Z][a-zA-Z\.]*[a-zA-Z]"/></p:inputText>
+             
+        <p:outputLabel for="aller" value="Aller:" />
+        <p:calendar id="aller" value="#{calendarView.date3}" showOn="button" />
+        
+       <p:outputLabel for="retour" value="Retour:" />
+        <p:calendar id="retour" value="#{calendarView.date3}" showOn="button" />
+        <f:facet name="footer">
+                <p:commandButton value="Reserver" update="growl" action="#{reservationBean.reserver}"
+                                 oncomplete="handleLoginRequest(xhr, status, args)" />
+            </f:facet> 
+    </h:panelGrid>
+         
+</h:form>
+</div>
+</h:body>
+</html>

@@ -1,0 +1,26 @@
+package com.adaming.bean;
+
+import java.io.Serializable;
+
+import javax.annotation.PostConstruct;
+import javax.faces.bean.ManagedBean;
+import javax.faces.context.FacesContext;
+
+@ManagedBean
+public class HotelBean implements Serializable {
+	
+	private static final long serialVersionUID = 1L;
+	private String pays;
+	 @PostConstruct
+	    public void init() {	
+		pays = (String) FacesContext.getCurrentInstance().getExternalContext()
+				.getFlash().get("pays");
+		//System.out.println(city);
+	 }
+	public String getPays() {
+		return pays;
+	}
+	public void setPays(String pays) {
+		this.pays = pays;
+	}
+}

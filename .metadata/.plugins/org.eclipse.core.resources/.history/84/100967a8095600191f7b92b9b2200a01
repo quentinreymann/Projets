@@ -1,0 +1,6 @@
+package com.TP2.entities;
+
+@Embedded
+public class Adresse {
+
+}

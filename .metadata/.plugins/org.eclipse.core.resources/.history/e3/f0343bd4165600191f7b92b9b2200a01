@@ -1,0 +1,110 @@
+package com.TP2.test;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+
+import com.TP2.entities.Employer;
+import com.TP2.entities.Adresse;
+import com.TP2.entities.Projet;
+import com.TP2.entities.Equipe;
+import com.TP2.entities.Entreprise;
+
+
+
+public class Main {
+	
+	public static SessionFactory factory;
+	public static void main(String[] args) {
+		
+				
+			factory = new Configuration().configure().buildSessionFactory();
+			
+			Session session = factory.openSession();
+			Transaction t = session.beginTransaction();
+			createEmp(session,"emp1","empr1",25);
+			createEmp(session,"emp2","empr2",30);
+			createEmp(session,"emp3","empr3",35);
+			createEmp(session,"emp4","empr4",40);
+			createEmp(session,"emp5","empr5",45);
+			
+			createProj(session,"proj1");
+			createProj(session,"proj2");
+			createProj(session,"proj4");
+			createProj(session,"proj5");
+			
+			List<Projet> emprojets=new ArrayList<Projet>();
+			emprojets.add(proj1);
+			emprojets.add(proj2);
+			emprojets.add(proj3);
+			emprojets.add(proj4);
+			
+			List<Employer> emps = new ArrayList<Employer>();
+			emps.add(e1);
+			emps.add(e);
+			
+			proj1.setEmployers(emps);
+			proj2.setEmployers(emps);
+			
+			e.setProjets(emprojets);
+			e1.setProjets(emprojets);
+			
+			e.setProjets(emprojets);
+			session.persist(e);
+			
+			createAd(session,"rue1","ville1",69000);
+			createAd(session,"rue2","ville2",69001);
+			createAd(session,"rue3","ville3",69002);
+			createAd(session,"rue4","ville4",69003);
+			createAd(session,"rue5","ville5",69004);
+			
+			createEquipe(session,"eq1");
+			createEquipe(session,"eq2");
+			
+			createEnt(session,"ent");
+			
+			
+			
+			
+
+			t.commit();
+	}
+	
+	private static void createEmp(Session session, String nom, String prenom, int age) {
+		Employer e = new Employer();
+		e.setNom(nom);
+		e.setPrenom(prenom);
+		e.setAge(age);
+		session.persist(e);
+	}
+		
+	private static void createAd(Session session, String rue, String ville, int codePostale) {
+		Adresse a = new Adresse();
+		a.setRue(rue);
+		a.setVille(ville);
+		a.setCodePostale(codePostale);
+		session.persist(a);
+	}
+	
+	private static void createProj(Session session, String nom) {
+		Projet p = new Projet();
+		p.setNom(nom);;
+		session.persist(p);
+	}
+	
+	private static void createEquipe(Session session, String nom) {
+		Equipe eq = new Equipe();
+		eq.setNom(nom);;
+		session.persist(eq);
+	}
+	
+	private static void createEnt(Session session, String nom) {
+		Entreprise ent = new Entreprise();
+		ent.setNom(nom);;
+		session.persist(ent);
+	}
+}

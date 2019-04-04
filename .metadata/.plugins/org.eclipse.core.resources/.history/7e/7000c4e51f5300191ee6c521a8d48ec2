@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:b="http://bootsfaces.net/ui"
+    xmlns:f="http://xmlns.jcp.org/jsf/core"
+    xmlns:p="http://primefaces.org/ui" xmlns:a4j="http://richfaces.org/a4j"
+    xmlns:ui="http://java.sun.com/jsf/facelets">
+<h:head>
+
+<title>Comment nous contacter</title>
+<style>               
+        .Bimage{background-image:url("resources/autre/fond.jpg"); }        
+</style>
+</h:head>
+<h:body styleClass="Bimage">
+
+<div id="header">
+<p:breadCrumb align="center">
+    <p:menuitem value="Bob" url="http://localhost:8080/Magellan/acceuil.xhtml" />
+    <p:menuitem value="Nos destinations " url="http://localhost:8080/Magellan/reservation.xhtml" />
+    <p:menuitem value="Qui sommes nous ? " url="http://localhost:8080/Magellan/qui.xhtml" />
+    <p:menuitem value="Comment nous contacter " url="http://localhost:8080/Magellan/contact.xhtml" />
+ </p:breadCrumb>
+ </div>
+<br /><br /><br /><br />
+<a href="https://www.facebook.com/"><img src="resources/autre/fb.png" alt="mon fond" height="200px" 
+    width="200px"/></a><h:outputText float="right"
+                    value="Notre agence naît officiellement le 28 mars 2019 lors d'un défi lancé par notre formateur commun. Après une agence commune lancée par Quentin REYMANN et Nicolas L à Lyon, notre groupe a très vite pris de l'ampleur et est devenu le premier réseau d'agence de voyages 
+                    lyonnais avec deux agences réparties dans deux quartiers de la capitale des Gaules. C'est une agence reconnue par ses pairs et louées par ses clients pour son efficacité et son manque total de pitié concernant les abus et les réclamations. En agences de voyages mais surtout 
+                    sur internet, le groupe propose un nombre important de destinations malgré sa jeunesse. Jeunesse compensée par son dynamisme et l'envie de faire découvrir à ses clients des lieux connus comme des lieux insolites. Nous serons votre première et votre dernière agence de voyage!" />
+    <br /><br /><br />
+<a href="https://fr.linkedin.com"><img src="resources/autre/link.jpg" alt="mon fond" height="200px" 
+    width="200px"/></a>
+    <br /><br /><br />
+<a href="mailto:NandQTravel@gmail.com"><img src="resources/autre/mail.jpg" alt="mon fond" height="200px" 
+    width="200px"/></a>
+    <br /><br /><br />
+  
+</h:body>
+</html>

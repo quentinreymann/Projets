@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:b="http://bootsfaces.net/ui"
+    xmlns:f="http://xmlns.jcp.org/jsf/core"
+    xmlns:p="http://primefaces.org/ui" xmlns:a4j="http://richfaces.org/a4j"
+    xmlns:ui="http://java.sun.com/jsf/facelets">
+<h:head>
+<title>Bienvenue chez Nico et Quentin travel</title>
+<style>               
+        .Bimage{background-image:url("resources/autre/beach2.jpg"); }        
+</style>
+</h:head>
+<h:body styleClass="Bimage"><h:form>
+    <p:growl id="msgs" showDetail="true" />
+ 
+    <p:fieldset style="margin-bottom:10px;filter:alpha(opacity=60); opacity:0.6;">
+        <h:panelGrid columns="2" cellpadding="5">
+            <p:imageSwitch effect="fade" id="fadeEffect">
+    <ui:repeat value="#{logoBean.images}" var="image" id="fadeEffectImages">
+        <p:graphicImage  align="center" style="text-align:center;width:150px;height:75px" name="logos/#{image}" id="image" />
+    </ui:repeat>
+</p:imageSwitch>
+            <h3 style="color:#BA55D3;filter:alpha(opacity=100); opacity:0.99;" align="center"><font size="5"><font face="Verdana"> Nos partenaires pour vous dépayser!</font></font></h3>
+        </h:panelGrid>
+    </p:fieldset>
+    </h:form>
+<h3 style="color:#FAFAD2" align="center"><font size="7"><font face="Verdana"> N and Q : Visitez vos rêves</font></font></h3>
+<div id="header" style="filter:alpha(opacity=75); opacity:0.75;">
+<p:breadCrumb align="center">
+    <p:menuitem value="Bob" url="#" />
+    <p:menuitem value="Nos destinations " url="http://localhost:8080/Magellan/reservation.xhtml" />
+    <p:menuitem value="Qui sommes nous ? " url="http://localhost:8080/Magellan/qui.xhtml" />
+    <p:menuitem value="Comment nous contacter " url="http://localhost:8080/Magellan/contact.xhtml" />
+ </p:breadCrumb>
+ </div>
+
+<br /><br />
+<div align="center"><p:imageSwitch panelWidth="1100" panelHeight="400" effect="shuffle">
+    <ui:repeat value="#{imagesViewBean.images}" var="image">
+        <p:graphicImage name="voyage/#{image}" />
+    </ui:repeat>
+</p:imageSwitch></div>
+
+
+
+<h3>Jeremy</h3>
+<p>Grâce à eux j'ai vécu mon rêve à prix mini!</p>
+<br />
+<h3>Celia</h3>
+<p>Les plus beaux hotels à des prix raisonnables, grâce à eux j'ai pu faire le tour du Japon sans aucun soucis</p>
+<br />
+<h:form>
+    <h:panelGrid columns="2" cellpadding="5">
+        <p:outputLabel for="ignored" value="Pseudo Required" />
+        <p:inputText id="ignored" required="true" style="filter:alpha(opacity=50); opacity:0.5"/>
+    </h:panelGrid>
+ 
+    <p:fragment>
+        <p:autoUpdate />
+        <h:panelGrid columns="8" cellpadding="15">
+            <p:outputLabel for="txt" value="Racontez nous" />
+            <p:inputTextarea id="txt" value="#{listenerView.text}" style="filter:alpha(opacity=50); opacity:0.5;width:400px;height:200px;border:2px solid black;"></p:inputTextarea>
+            <p:commandButton value="Postez votre avis"/>
+            <h:outputText style="background-color:white;filter:alpha(opacity=75);opacity:0.75;" value="#{listenerView.text}" />
+        </h:panelGrid>
+    </p:fragment>
+</h:form>
+
+</h:body>
+</html>

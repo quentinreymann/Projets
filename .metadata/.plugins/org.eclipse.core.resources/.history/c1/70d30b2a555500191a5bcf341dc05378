@@ -1,0 +1,15 @@
+package embedded;
+
+@Embeddable
+public class adresse implements Serializable{
+	
+	@Column
+	private String rue;
+	
+	@Column
+	private String ville;
+	
+	@Column 
+	private int codePostale;
+
+}

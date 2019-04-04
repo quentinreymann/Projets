@@ -1,0 +1,17 @@
+package TablePerClass;
+
+public class Directeur extends employe{
+	
+	private String nomEquipe;
+	
+	public Directeur() {
+		
+	}
+
+
+
+	
+	
+	
+
+}

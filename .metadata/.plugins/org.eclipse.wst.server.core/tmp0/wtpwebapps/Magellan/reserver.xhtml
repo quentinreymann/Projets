@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:b="http://bootsfaces.net/ui"
+    xmlns:f="http://xmlns.jcp.org/jsf/core"
+    xmlns:p="http://primefaces.org/ui" xmlns:a4j="http://richfaces.org/a4j"
+    xmlns:ui="http://java.sun.com/jsf/facelets">
+<h:head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>N et Q destinations</title>
+<style>               
+        .Bimage{background-image:url("resources/autre/voyage.jpg"); }   
+             
+</style>
+<style type="text/css">
+    .ui-datalist {
+        width:300px;
+        margin-bottom: 20px;
+    }
+ 
+    .ui-datalist-item {
+        padding:3px;
+    }
+ 
+    .paginated .ui-datalist-data {
+        padding-left: 20px;
+    }
+</style>
+</h:head>
+<h:body styleClass="Bimage">
+<script type="text/javascript">
+    function handleLoginRequest(xhr, status, args) {
+        if(args.validationFailed || !args.loggedIn) {
+            PF('dlg').jq.effect("shake", {times:5}, 100);
+        }
+        else {
+            PF('dlg').hide();
+            $('#loginLink').fadeOut();
+        }
+    }
+</script>
+
+
+<div id="header">
+<p:breadCrumb align="center">
+    <p:menuitem value="Bob" url="http://localhost:8080/Magellan/" />
+    <p:menuitem value="Nos destinations " url="http://localhost:8080/Magellan/reservation.xhtml" />
+    <p:menuitem value="Qui sommes nous ? " url="http://localhost:8080/Magellan/qui.xhtml" />
+    <p:menuitem value="Comment nous contacter " url="http://localhost:8080/Magellan/contact.xhtml" />
+ </p:breadCrumb>
+ </div>
+<br /><br />
+
+<h:form id="form">
+    
+ 
+      <p:dataList value="#{dataListView.cars3}" var="car" type="unordered" itemType="none" paginator="false" rows="5" columns="10" styleClass="paginated">
+       
+        <p:commandLink update=":form:carDetail" oncomplete="PF('carDialog').show()" title="View Detail" styleClass="ui-icon pi pi-search" style="float:left;margin-right:10px;margin-top:3px; color:#333333">
+            <f:setPropertyActionListener value="#{car}" target="#{dataListView.selectedCar}" />
+            <h:outputText value="France" />
+            <br />
+            <h:outputText value="Australie" />
+            <br />
+            <h:outputText value="USA" />
+            <br />
+            <h:outputText value="Japon" />
+            <br />
+            <h:outputText value="Egypte" />
+            
+        </p:commandLink>
+        <h:outputText value="#{country.name}" style="display:inline-block"/>
+    </p:dataList>
+ 
+    <p:dialog header="Car Info" widgetVar="carDialog" modal="true" showEffect="blind" hideEffect="explode" resizable="false">
+        <p:outputPanel id="carDetail" style="text-align:center;">
+            <p:panelGrid  columns="2" rendered="#{not empty dataListView.selectedCar}" columnClasses="label,value">
+                <f:facet name="header">
+                    <p:graphicImage name="demo/images/car/#{dataListView.selectedCar.brand}-big.gif"/> 
+                </f:facet>
+ 
+                <h:outputText value="Id:" />
+                <h:outputText value="#{dataListView.selectedCar.id}" />
+
+                <h:outputText value="Price" />
+                <h:outputText value="$#{dataListView.selectedCar.price}" />
+            </p:panelGrid>
+        </p:outputPanel>
+    </p:dialog>
+</h:form>
+
+</h:body>
+</html>

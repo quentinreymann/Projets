@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:b="http://bootsfaces.net/ui"
+    xmlns:f="http://xmlns.jcp.org/jsf/core"
+    xmlns:p="http://primefaces.org/ui" xmlns:a4j="http://richfaces.org/a4j"
+    xmlns:ui="http://java.sun.com/jsf/facelets">
+<h:head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>Hotels de vos reves</title>
+<style>               
+        .Bimage{background-image:url("resources/autre/voyage.jpg"); }   
+             
+</style>
+</h:head>
+<h:body styleClass="Bimage">
+<p:accordionPanel style="filter:alpha(opacity=85); opacity:0.85;" multiple="true" >
+<!--  rendered="#{monbean.pays == 'France'}"-->
+        <p:tab title="Paris ">
+            <h:panelGrid columns="2" cellpadding="10">
+                <p:graphicImage name="Hotels/hotel1.jpg" />
+                <br />
+                <h:outputText value="Hotel des Champs-Elysées"/>
+                <h:outputText
+                    value="Un hôtel de grand standing au coeur de Paris. Vous serez aux premières loges pour toute festivité de la capitale tout en étant aux premières loges tous les samedis pour une plongée au coeur de l'âme française, râler en brulant tout.
+                    Le tout pour un prix extrêmement modéré pour une chambre tout confort pour deux avec un lit double et une vue sur les kékés des Champs. Occasion à ne pas manquer!" />
+                <h:outputText value="Coût d'une nuitée: 9800e"/>   
+            </h:panelGrid>
+            <h:form>
+    <p:commandButton value="Réserver maintenant !" icon="pi pi-home" action="reservationpop" />
+			</h:form>
+            <h:panelGrid columns="2" cellpadding="10">
+                <p:graphicImage name="Hotels/hotel2.jpg" />
+                <br />
+                <h:outputText value="Hotel Matignon"/>
+                <h:outputText
+                    value="Un hôtel de style impérial ou l'on peut tranquillement se reposer et ne pas faire grand chose. Chambre d'un luxe irréprochable, d'un hôtel situé au centre de la capitale 
+                    L'environnement est très silencieux et huppé, profitez d'un Paris grand luxe loin des vas-nu-pieds!" />
+                <h:outputText value="Coût d'une nuitée: 7500e"/>
+            </h:panelGrid>
+            <p:commandButton value="Réserver maintenant !" icon="pi pi-home" action="reservationpop" />
+        </p:tab>
+        <p:tab title="Strasbourg">
+            <h:panelGrid columns="2" cellpadding="10">
+                <p:graphicImage name="Hotels/hotel3.jpg" /><br />
+                <h:outputText value="Hotel de la cathédrale"/>
+                <h:outputText value="Magnifique Hôtel directement situé dans le centre historique de Strasbourg à quelques minutes à pieds de la célèbre cathédrale. Les chambres sont spacieuses et silencieuses et le personnel est capable de parler français en plis de l'allemand! "/>
+            <h:outputText value="Coût d'une nuitée: 85e"/>
+            </h:panelGrid>
+            <p:commandButton value="Réserver maintenant !" icon="pi pi-home" action="reservationpop" />
+             <h:panelGrid columns="2" cellpadding="10">
+                <p:graphicImage name="Hotels/hotel4.jpg" /><br />
+                <h:outputText value="Hotel de la petite France"/>
+                <h:outputText value="Hotel très calme au bord des canaux du célèbre quartier de la petite France à deux pas des restaurants traditionnels alsaciens et des attrapes touristes.  " />
+            <h:outputText value="Coût d'une nuitée: 75e"/>
+            </h:panelGrid>
+            <p:commandButton value="Réserver maintenant !" icon="pi pi-home" action="reservationpop" />
+              <h:panelGrid columns="2" cellpadding="10">
+                <p:graphicImage name="Hotels/hotel5.jpg" /><br />
+                <h:outputText value="Hotel de la NeuStadt"/>
+                <h:outputText value="Hotel très germanique situé dans le quartier bati après l'annexion de l'Alsace en 1871. Pas dans le centre mais néanmoins à mo.ins de 15minutes à pieds du centre ville, son quartier atypique et la présence de nombreux jeunes étudiants bien faits vous raviront"/>
+                <h:outputText value="Coût d'une nuitée: 65e"/>
+                </h:panelGrid>
+            <p:commandButton value="Réserver maintenant !" icon="pi pi-home" action="reservationpop" />
+        </p:tab>
+        <p:tab title="Marseille">
+            <h:panelGrid columns="2" cellpadding="10">
+                <p:graphicImage name="Hotels/hotel6.jpg" /><br />
+                <h:outputText value="Hotel du Vieux Ports"/>
+                <h:outputText value="Hotel splendide presque les pieds dans l'eau, juste à côté de la criée aux poissons, visitez la plus mediterranéenne des cités françaises. L'hôtel est très calme malgré sa situation géographique et vous serez très bien acceuillis. "/>
+         	<h:outputText value="Coût d'une nuitée: 90e"/>
+         	</h:panelGrid>
+         	<p:commandButton value="Réserver maintenant !" icon="pi pi-home" action="reservationpop" />
+            <h:panelGrid columns="2" cellpadding="10">
+                <p:graphicImage name="Hotels/hotel7.jpg" /><br />
+                <h:outputText value="Hotel de la Cannebière"/>
+                <h:outputText value="Hotel très calme construit dans un ancien couvent, l'ambiance y est très dévote et le personnel très sympathique et silencieux, vous ne serez qu'à 10minutes du centre de Marseille, le tout sans les agitations habituelles de la cité phocéenne. Les chambres sont spacieuses et très bien éclairées."/>
+           		<h:outputText value="Coût d'une nuitée: 60e"/>
+            </h:panelGrid>
+            <p:commandButton value="Réserver maintenant !" icon="pi pi-home" action="reservationpop" />
+        </p:tab>
+        <p:tab title="Biarritz">
+               <h:panelGrid columns="2" cellpadding="10">
+                <p:graphicImage name="Hotels/hotel8.jpg" /><br />
+                <h:outputText value="Hotel de la mer"/>
+                <h:outputText value="Hotel atypique les pieds dans l'eau qui propose une décoration basée sur le thème de la mer avec un staff très bourru digne des plus grands marins, si vous n'avez pas le mal de mer, foncez!"/>
+            	<h:outputText value="Coût d'une nuitée: 80e"/>
+            </h:panelGrid>
+            <p:commandButton value="Réserver maintenant !" icon="pi pi-home" action="reservationpop" />
+            <h:panelGrid columns="2" cellpadding="10">
+                <p:graphicImage name="Hotels/hotel9.jpg" /><br />
+                <h:outputText value="Hotel du surf"/>
+                <h:outputText value="Hotel qui sent bon l'océan et le challenge, accuillit par tout le staff en mode brice de Nice, profitez bien des vagues et des couchers de soleil sur l'Atlantique ansi que des locaux à l'accent chantant."/>
+           		<h:outputText value="Coût d'une nuitée: 75e"/>
+            </h:panelGrid>
+            <p:commandButton value="Réserver maintenant !" icon="pi pi-home" action="reservationpop" />
+        </p:tab>
+    </p:accordionPanel>
+<br />    
+<p:accordionPanel style="filter:alpha(opacity=85); opacity:0.85;" multiple="true" >
+<!--  rendered="#{monbean.pays == 'Egypte'}"-->
+        <p:tab title="Le Caire ">
+            <h:panelGrid columns="2" cellpadding="10">
+                <p:graphicImage name="Hotels/hotel10.jpg" /><br />
+                <h:outputText value="Hotel des pyramides"/>
+                <h:outputText
+                    value="Splendide hôtel aux pieds de la dernière des 7 merveilles antiques de la planète, profitez de la chaleur étouffante des journées et de la fraicheur nocturne digne des pôles. L'hôtel en lui même est un havre de paix dans un environnement de fin du monde, remarchez dans les traces des plus grands egyptologues "/>
+            	<h:outputText value="Coût d'une nuitée: 175e"/>
+            </h:panelGrid>
+             <p:commandButton value="Réserver maintenant !" icon="pi pi-home" action="reservationpop" />
+            <h:panelGrid columns="2" cellpadding="10">
+                <p:graphicImage name="Hotels/hotel12.jpg" /><br />
+                <h:outputText value="Hotel du Sphinx"/>
+                <h:outputText
+                    value="Hôtel de rêve à côté du célèbre poseur d'enigme et du relou le plus ancien de la mythologie qui a manqué de flair sur la fin! Les chambres sont très vastes, excellentes pour une famille nombreuse et le tout entouré de touristes chinois, rien de mieux pour le dépaysement."/>
+                 <h:outputText value="Coût d'une nuitée: 155e"/>   
+                    </h:panelGrid>
+             <p:commandButton value="Réserver maintenant !" icon="pi pi-home" action="reservationpop" />
+        </p:tab>
+        <p:tab title="Alexandrie">
+            <h:panelGrid columns="2" cellpadding="10">
+                <p:graphicImage name="Hotels/hotel11.jpg" /><br />
+                <h:outputText value="Hotel du phare"/>
+                <h:outputText value="Hotel réputé mondialement avec un service digne de ce qui reste du célèbre phare, les gens sont acceuillants et les chambres ne prennent l'eau qu'en temps de pluie! Si vous voulez visitez la partie la moins historique d'Egypte, cet hôtel est parfait pour vous! "/>
+           		<h:outputText value="Coût d'une nuitée: 65e"/> 
+            </h:panelGrid>
+             <p:commandButton value="Réserver maintenant !" icon="pi pi-home" action="reservationpop" />
+             <h:panelGrid columns="2" cellpadding="10">
+                <p:graphicImage name="Hotels/hotel13.jpg" /><br />
+                <h:outputText value="Hotel de la Bibliothèque"/>
+                <h:outputText value="Très bel hôtel à la sécurité incendie digne de la bibliothèque du meme non, si vous être on fire, foncez réserver vos chambres!"/>
+                <h:outputText value="Coût d'une nuitée: 55e"/> 
+                </h:panelGrid>
+             <p:commandButton value="Réserver maintenant !" icon="pi pi-home" action="reservationpop" />
+              
+        </p:tab>
+    </p:accordionPanel>
+    
+<br />    
+<p:accordionPanel style="filter:alpha(opacity=85); opacity:0.85;" multiple="true" >
+<!--  rendered="#{monbean.pays == 'USA'}"-->
+        <p:tab title="New-York ">
+            <h:panelGrid columns="2" cellpadding="10">
+                <p:graphicImage name="Hotels/hotel14.jpg" /><br />
+                <h:outputText value="Hotel de la Statue de la liberté"/>
+                <h:outputText
+                    value="Si vous voulez commencer une nouvelle vie comme tous les squatteurs de la terre des indiens, c'est par ici! Profitez de Rhodes island, une île totalement artificielle comme les habitants de la ville!"/>
+           	<h:outputText value="Coût d'une nuitée: 755e"/> 
+            </h:panelGrid>
+              <p:commandButton value="Réserver maintenant !" icon="pi pi-home" action="reservationpop" />
+            <h:panelGrid columns="2" cellpadding="10">
+                <p:graphicImage name="Hotels/hotel15.jpg" /><br />
+                <h:outputText value="Hotel des Twins Towers"/>
+                <h:outputText
+                    value="Hotel situé au centre de Manhattan dans une toute nouvelle tour, vous pouvez vous y rendre en avion, celà ne vous coûtera qu'un cutter! Les chambres sont magnifiques, on a une magnifique vue, surtout les vendredis matins de certains mois de septembre. "/>
+                <h:outputText value="Coût d'une nuitée: 1255e"/>  
+                    </h:panelGrid>
+             <p:commandButton value="Réserver maintenant !" icon="pi pi-home" action="reservationpop" />
+        </p:tab>
+        <p:tab title="San Francisco">
+            <h:panelGrid columns="2" cellpadding="10">
+                <p:graphicImage name="Hotels/hotel16.jpg" /><br />
+                <h:outputText value="Hotel du pont"/>
+                <h:outputText value="Magnifique hôtel près de l'ouvrage en métal, véritable acteur d'un nombre important de productions hollywoodiennes de ces 50 dernières années. Idéalement placé, vous êtes qu'à 30 minutes du centre ville."/>
+           		<h:outputText value="Coût d'une nuitée: 755e"/>
+            </h:panelGrid>
+              <p:commandButton value="Réserver maintenant !" icon="pi pi-home" action="reservationpop" />
+            
+             <h:panelGrid columns="2" cellpadding="10">
+                <p:graphicImage name="Hotels/hotel17.jpg" />
+                <h:outputText value="Hotel de la pente"/>
+                <h:outputText value="Le futur de notre groupe passe d'abord par une multiplication des destinations proposées et surtout par leur étrangeté croissante, en effet, en 2020 sont attendues les premières destinations dites de zone FFA (free for all) telles que l'Irak, la Syrie, le Yemen, le Brésil ou l'Ukraine.
+                Il sera aussi possible à l'horizon 2025 de partir en vacances autour de la Terre ou sur la base lunaire chinoise pour des prix toujours aussi modestes que ceux proposés actuellement.  " />
+            </h:panelGrid>
+             <p:commandButton value="Réserver maintenant !" icon="pi pi-home" action="reservationpop" />
+              <h:panelGrid columns="2" cellpadding="10">
+                <p:graphicImage name="Hotels/hotel18.jpg" />
+                <h:outputText value="Hotel d'alcatraz"/>
+                <h:outputText value="Le futur de notre groupe passe d'abord par une multiplication des destinations proposées et surtout par leur étrangeté croissante, en effet, en 2020 sont attendues les premières destinations dites de zone FFA (free for all) telles que l'Irak, la Syrie, le Yemen, le Brésil ou l'Ukraine.
+                Il sera aussi possible à l'horizon 2025 de partir en vacances autour de la Terre ou sur la base lunaire chinoise pour des prix toujours aussi modestes que ceux proposés actuellement.  " />
+            </h:panelGrid>
+             <p:commandButton value="Réserver maintenant !" icon="pi pi-home" action="reservationpop" />
+        </p:tab>
+        <p:tab title="Miami">
+            <h:panelGrid columns="2" cellpadding="10">
+                <p:graphicImage name="Hotels/hotel19.jpg" />
+                <h:outputText value="Hotel de la plage"/>
+                <h:outputText value="Hahahaha! des garanties? Pourquoi pas des réductions sur certaines destinations? Non, nos prix sont justes et dépendent d'un certain nombre de critère d'importance comme les tarifs des contrôleurs aériens pour laisser voler nos avions ou les pot de vin aux forces de l'ordre locales.
+                Toute réclamation doit néanmoins se faire à l'adresse suivante c:corbeille@yahoo.com. Il y a possibilité de recevoir des coupons de réductions en cas de décès d'un proche lors d'un voyage précédent avec notre noble agence de voyage(sont exclues toute mort naturelle ou non naturelle). Au plaisir de ne jamais vous voir nous contacter " />
+            
+         	</h:panelGrid>
+         	 <p:commandButton value="Réserver maintenant !" icon="pi pi-home" action="reservationpop" /> 
+            <h:panelGrid columns="2" cellpadding="10">
+                <p:graphicImage name="Hotels/hotel20.jpg" />
+                <h:outputText value="Hotel des caraibes"/>
+                <h:outputText value="Hahahaha! des garanties? Pourquoi pas des réductions sur certaines destinations? Non, nos prix sont justes et dépendent d'un certain nombre de critère d'importance comme les tarifs des contrôleurs aériens pour laisser voler nos avions ou les pot de vin aux forces de l'ordre locales.
+                Toute réclamation doit néanmoins se faire à l'adresse suivante c:corbeille@yahoo.com. Il y a possibilité de recevoir des coupons de réductions en cas de décès d'un proche lors d'un voyage précédent avec notre noble agence de voyage(sont exclues toute mort naturelle ou non naturelle). Au plaisir de ne jamais vous voir nous contacter " />
+                
+            </h:panelGrid>
+             <p:commandButton value="Réserver maintenant !" icon="pi pi-home" action="reservationpop" />
+        </p:tab>
+    </p:accordionPanel>
+
+<br />
+<p:accordionPanel style="filter:alpha(opacity=85); opacity:0.85;" multiple="true" >
+<!--  rendered="#{monbean.pays == 'Japon'}"-->
+        <p:tab title="Tokyo ">
+            <h:panelGrid columns="2" cellpadding="10">
+                <p:graphicImage name="Hotels/hotel21.jpg" />
+                <h:outputText value="Love Hotel"/>
+                <h:outputText
+                    value="Notre agence naît officiellement le 28 mars 2019 lors d'un défi lancé par notre formateur commun. Après une agence commune lancée par Quentin REYMANN et Nicolas L à Lyon, notre groupe a très vite pris de l'ampleur et est devenu le premier réseau d'agence de voyages 
+                    lyonnais avec deux agences réparties dans deux quartiers de la capitale des Gaules. C'est une agence reconnue par ses pairs et louées par ses clients pour son efficacité et son manque total de pitié concernant les abus et les réclamations. En agences de voyages mais surtout 
+                    sur internet, le groupe propose un nombre important de destinations malgré sa jeunesse. Jeunesse compensée par son dynamisme et l'envie de faire découvrir à ses clients des lieux connus comme des lieux insolites. Nous serons votre première et votre dernière agence de voyage!" />
+                    
+            </h:panelGrid>
+             <p:commandButton value="Réserver maintenant !" icon="pi pi-home" action="reservationpop" />
+            <h:panelGrid columns="2" cellpadding="10">
+                <p:graphicImage name="Hotels/hotel22.jpg" />
+                <h:outputText value="Hotel bulle"/>
+                <h:outputText
+                    value="Notre agence naît officiellement le 28 mars 2019 lors d'un défi lancé par notre formateur commun. Après une agence commune lancée par Quentin REYMANN et Nicolas L à Lyon, notre groupe a très vite pris de l'ampleur et est devenu le premier réseau d'agence de voyages 
+                    lyonnais avec deux agences réparties dans deux quartiers de la capitale des Gaules. C'est une agence reconnue par ses pairs et louées par ses clients pour son efficacité et son manque total de pitié concernant les abus et les réclamations. En agences de voyages mais surtout 
+                    sur internet, le groupe propose un nombre important de destinations malgré sa jeunesse. Jeunesse compensée par son dynamisme et l'envie de faire découvrir à ses clients des lieux connus comme des lieux insolites. Nous serons votre première et votre dernière agence de voyage!" />
+            </h:panelGrid>
+             <p:commandButton value="Réserver maintenant !" icon="pi pi-home" action="reservationpop" />
+            <h:panelGrid columns="2" cellpadding="10">
+                <p:graphicImage name="Hotels/hotel23.jpg" />
+                <h:outputText value="Hotel du Samurai"/>
+                <h:outputText
+                    value="Notre agence naît officiellement le 28 mars 2019 lors d'un défi lancé par notre formateur commun. Après une agence commune lancée par Quentin REYMANN et Nicolas L à Lyon, notre groupe a très vite pris de l'ampleur et est devenu le premier réseau d'agence de voyages 
+                    lyonnais avec deux agences réparties dans deux quartiers de la capitale des Gaules. C'est une agence reconnue par ses pairs et louées par ses clients pour son efficacité et son manque total de pitié concernant les abus et les réclamations. En agences de voyages mais surtout 
+                    sur internet, le groupe propose un nombre important de destinations malgré sa jeunesse. Jeunesse compensée par son dynamisme et l'envie de faire découvrir à ses clients des lieux connus comme des lieux insolites. Nous serons votre première et votre dernière agence de voyage!" />
+            </h:panelGrid>
+             <p:commandButton value="Réserver maintenant !" icon="pi pi-home" action="reservationpop" />
+        </p:tab>
+        <p:tab title="Kyoto">
+            <h:panelGrid columns="2" cellpadding="10">
+                <p:graphicImage name="Hotels/hotel24.jpg" />
+                <h:outputText value="Hotel de l'empereur"/>
+                <h:outputText value="Le futur de notre groupe passe d'abord par une multiplication des destinations proposées et surtout par leur étrangeté croissante, en effet, en 2020 sont attendues les premières destinations dites de zone FFA (free for all) telles que l'Irak, la Syrie, le Yemen, le Brésil ou l'Ukraine.
+                Il sera aussi possible à l'horizon 2025 de partir en vacances autour de la Terre ou sur la base lunaire chinoise pour des prix toujours aussi modestes que ceux proposés actuellement.  " />
+                
+            </h:panelGrid>
+             <p:commandButton value="Réserver maintenant !" icon="pi pi-home" action="reservationpop" />
+            
+             <h:panelGrid columns="2" cellpadding="10">
+                <p:graphicImage name="Hotels/hotel25.jpg" />
+                <h:outputText value="Hotel du palais"/>
+                <h:outputText value="Le futur de notre groupe passe d'abord par une multiplication des destinations proposées et surtout par leur étrangeté croissante, en effet, en 2020 sont attendues les premières destinations dites de zone FFA (free for all) telles que l'Irak, la Syrie, le Yemen, le Brésil ou l'Ukraine.
+                Il sera aussi possible à l'horizon 2025 de partir en vacances autour de la Terre ou sur la base lunaire chinoise pour des prix toujours aussi modestes que ceux proposés actuellement.  " />
+            </h:panelGrid>
+             <p:commandButton value="Réserver maintenant !" icon="pi pi-home" action="reservationpop" />
+              <h:panelGrid columns="2" cellpadding="10">
+                <p:graphicImage name="Hotels/hotel26.jpg" />
+                <h:outputText value="Hotel du Dojo"/>
+                <h:outputText value="Le futur de notre groupe passe d'abord par une multiplication des destinations proposées et surtout par leur étrangeté croissante, en effet, en 2020 sont attendues les premières destinations dites de zone FFA (free for all) telles que l'Irak, la Syrie, le Yemen, le Brésil ou l'Ukraine.
+                Il sera aussi possible à l'horizon 2025 de partir en vacances autour de la Terre ou sur la base lunaire chinoise pour des prix toujours aussi modestes que ceux proposés actuellement.  " />
+            </h:panelGrid>
+             <p:commandButton value="Réserver maintenant !" icon="pi pi-home" action="reservationpop" />
+        </p:tab>
+        <p:tab title="Fukushima">
+            <h:panelGrid columns="2" cellpadding="10">
+                <p:graphicImage name="Hotels/hotel27.jpg" />
+                <h:outputText value="Hotel de la fin du monde"/>
+                <h:outputText value="Hahahaha! des garanties? Pourquoi pas des réductions sur certaines destinations? Non, nos prix sont justes et dépendent d'un certain nombre de critère d'importance comme les tarifs des contrôleurs aériens pour laisser voler nos avions ou les pot de vin aux forces de l'ordre locales.
+                Toute réclamation doit néanmoins se faire à l'adresse suivante c:corbeille@yahoo.com. Il y a possibilité de recevoir des coupons de réductions en cas de décès d'un proche lors d'un voyage précédent avec notre noble agence de voyage(sont exclues toute mort naturelle ou non naturelle). Au plaisir de ne jamais vous voir nous contacter " />
+             
+         	</h:panelGrid>
+         	  <p:commandButton value="Réserver maintenant !" icon="pi pi-home" action="reservationpop" />
+            <h:panelGrid columns="2" cellpadding="10">
+                <p:graphicImage name="Hotels/hotel28.jpg" />
+                <h:outputText value="Hotel phosphorescent"/>
+                <h:outputText value="Hahahaha! des garanties? Pourquoi pas des réductions sur certaines destinations? Non, nos prix sont justes et dépendent d'un certain nombre de critère d'importance comme les tarifs des contrôleurs aériens pour laisser voler nos avions ou les pot de vin aux forces de l'ordre locales.
+                Toute réclamation doit néanmoins se faire à l'adresse suivante c:corbeille@yahoo.com. Il y a possibilité de recevoir des coupons de réductions en cas de décès d'un proche lors d'un voyage précédent avec notre noble agence de voyage(sont exclues toute mort naturelle ou non naturelle). Au plaisir de ne jamais vous voir nous contacter " />
+                
+            </h:panelGrid>
+             <p:commandButton value="Réserver maintenant !" icon="pi pi-home" action="reservationpop" />
+            <h:panelGrid columns="2" cellpadding="10">
+                <p:graphicImage name="Hotels/hotel29.jpg" />
+                <h:outputText value="Hotel du Tsunami"/>
+                <h:outputText value="Hahahaha! des garanties? Pourquoi pas des réductions sur certaines destinations? Non, nos prix sont justes et dépendent d'un certain nombre de critère d'importance comme les tarifs des contrôleurs aériens pour laisser voler nos avions ou les pot de vin aux forces de l'ordre locales.
+                Toute réclamation doit néanmoins se faire à l'adresse suivante c:corbeille@yahoo.com. Il y a possibilité de recevoir des coupons de réductions en cas de décès d'un proche lors d'un voyage précédent avec notre noble agence de voyage(sont exclues toute mort naturelle ou non naturelle). Au plaisir de ne jamais vous voir nous contacter " />
+                
+            </h:panelGrid>
+            <p:commandButton value="Réserver maintenant !" icon="pi pi-home" action="reservationpop" />
+        </p:tab>
+    </p:accordionPanel>  
+    
+<br />
+<p:accordionPanel style="filter:alpha(opacity=85); opacity:0.85;" multiple="true" >
+<!--  rendered="#{monbean.pays == 'Australie'}"-->
+        <p:tab title="Melbourne ">
+            <h:panelGrid columns="2" cellpadding="10">
+                <p:graphicImage name="Hotels/hotel30.jpg" />
+                <h:outputText value="Hotel de la mairie"/>
+                <h:outputText
+                    value="Notre agence naît officiellement le 28 mars 2019 lors d'un défi lancé par notre formateur commun. Après une agence commune lancée par Quentin REYMANN et Nicolas L à Lyon, notre groupe a très vite pris de l'ampleur et est devenu le premier réseau d'agence de voyages 
+                    lyonnais avec deux agences réparties dans deux quartiers de la capitale des Gaules. C'est une agence reconnue par ses pairs et louées par ses clients pour son efficacité et son manque total de pitié concernant les abus et les réclamations. En agences de voyages mais surtout 
+                    sur internet, le groupe propose un nombre important de destinations malgré sa jeunesse. Jeunesse compensée par son dynamisme et l'envie de faire découvrir à ses clients des lieux connus comme des lieux insolites. Nous serons votre première et votre dernière agence de voyage!" />
+                    
+            </h:panelGrid>
+             <p:commandButton value="Réserver maintenant !" icon="pi pi-home" action="reservationpop" />
+            <h:panelGrid columns="2" cellpadding="10">
+                <p:graphicImage name="Hotels/hotel31.jpg" />
+                <h:outputText value="Hotel des kangourous"/>
+                <h:outputText
+                    value="Notre agence naît officiellement le 28 mars 2019 lors d'un défi lancé par notre formateur commun. Après une agence commune lancée par Quentin REYMANN et Nicolas L à Lyon, notre groupe a très vite pris de l'ampleur et est devenu le premier réseau d'agence de voyages 
+                    lyonnais avec deux agences réparties dans deux quartiers de la capitale des Gaules. C'est une agence reconnue par ses pairs et louées par ses clients pour son efficacité et son manque total de pitié concernant les abus et les réclamations. En agences de voyages mais surtout 
+                    sur internet, le groupe propose un nombre important de destinations malgré sa jeunesse. Jeunesse compensée par son dynamisme et l'envie de faire découvrir à ses clients des lieux connus comme des lieux insolites. Nous serons votre première et votre dernière agence de voyage!" />
+            </h:panelGrid>
+             <p:commandButton value="Réserver maintenant !" icon="pi pi-home" action="reservationpop" />
+            <h:panelGrid columns="2" cellpadding="10">
+                <p:graphicImage name="Hotels/hotel32.jpg" />
+                <h:outputText value="Hotel du koala"/>
+                <h:outputText
+                    value="Notre agence naît officiellement le 28 mars 2019 lors d'un défi lancé par notre formateur commun. Après une agence commune lancée par Quentin REYMANN et Nicolas L à Lyon, notre groupe a très vite pris de l'ampleur et est devenu le premier réseau d'agence de voyages 
+                    lyonnais avec deux agences réparties dans deux quartiers de la capitale des Gaules. C'est une agence reconnue par ses pairs et louées par ses clients pour son efficacité et son manque total de pitié concernant les abus et les réclamations. En agences de voyages mais surtout 
+                    sur internet, le groupe propose un nombre important de destinations malgré sa jeunesse. Jeunesse compensée par son dynamisme et l'envie de faire découvrir à ses clients des lieux connus comme des lieux insolites. Nous serons votre première et votre dernière agence de voyage!" />
+            </h:panelGrid>
+             <p:commandButton value="Réserver maintenant !" icon="pi pi-home" action="reservationpop" />
+        </p:tab>
+        <p:tab title="Canberra">
+            <h:panelGrid columns="2" cellpadding="10">
+                <p:graphicImage name="Hotels/hotel33.jpg" />
+                <h:outputText value="Hotel du parlement"/>
+                <h:outputText value="Le futur de notre groupe passe d'abord par une multiplication des destinations proposées et surtout par leur étrangeté croissante, en effet, en 2020 sont attendues les premières destinations dites de zone FFA (free for all) telles que l'Irak, la Syrie, le Yemen, le Brésil ou l'Ukraine.
+                Il sera aussi possible à l'horizon 2025 de partir en vacances autour de la Terre ou sur la base lunaire chinoise pour des prix toujours aussi modestes que ceux proposés actuellement.  " />
+                
+            </h:panelGrid>   
+             <p:commandButton value="Réserver maintenant !" icon="pi pi-home" action="reservationpop" />       
+             <h:panelGrid columns="2" cellpadding="10">
+                <p:graphicImage name="Hotels/hotel34.jpg" />
+                <h:outputText value="Hotel de la reine"/>
+                <h:outputText value="Le futur de notre groupe passe d'abord par une multiplication des destinations proposées et surtout par leur étrangeté croissante, en effet, en 2020 sont attendues les premières destinations dites de zone FFA (free for all) telles que l'Irak, la Syrie, le Yemen, le Brésil ou l'Ukraine.
+                Il sera aussi possible à l'horizon 2025 de partir en vacances autour de la Terre ou sur la base lunaire chinoise pour des prix toujours aussi modestes que ceux proposés actuellement.  " />
+            </h:panelGrid>
+             <p:commandButton value="Réserver maintenant !" icon="pi pi-home" action="reservationpop" />
+              <h:panelGrid columns="2" cellpadding="10">
+                <p:graphicImage name="Hotels/hotel35.jpg" />
+                <h:outputText value="Hotel des aborigènes"/>
+                <h:outputText value="Le futur de notre groupe passe d'abord par une multiplication des destinations proposées et surtout par leur étrangeté croissante, en effet, en 2020 sont attendues les premières destinations dites de zone FFA (free for all) telles que l'Irak, la Syrie, le Yemen, le Brésil ou l'Ukraine.
+                Il sera aussi possible à l'horizon 2025 de partir en vacances autour de la Terre ou sur la base lunaire chinoise pour des prix toujours aussi modestes que ceux proposés actuellement.  " />
+            </h:panelGrid>
+             <p:commandButton value="Réserver maintenant !" icon="pi pi-home" action="reservationpop" />
+        </p:tab>
+        <p:tab title="Sydney">
+            <h:panelGrid columns="2" cellpadding="10">
+                <p:graphicImage name="Hotels/hotel36.jpg" />
+                <h:outputText value="Hotel du théatre"/>
+                <h:outputText value="Hahahaha! des garanties? Pourquoi pas des réductions sur certaines destinations? Non, nos prix sont justes et dépendent d'un certain nombre de critère d'importance comme les tarifs des contrôleurs aériens pour laisser voler nos avions ou les pot de vin aux forces de l'ordre locales.
+                Toute réclamation doit néanmoins se faire à l'adresse suivante c:corbeille@yahoo.com. Il y a possibilité de recevoir des coupons de réductions en cas de décès d'un proche lors d'un voyage précédent avec notre noble agence de voyage(sont exclues toute mort naturelle ou non naturelle). Au plaisir de ne jamais vous voir nous contacter " />
+             
+         	</h:panelGrid>
+         	 <p:commandButton value="Réserver maintenant !" icon="pi pi-home" action="reservationpop" /> 
+            <h:panelGrid columns="2" cellpadding="10">
+                <p:graphicImage name="Hotels/hotel37.jpg" />
+                <h:outputText value="Hotel de la baie"/>
+                <h:outputText value="Hahahaha! des garanties? Pourquoi pas des réductions sur certaines destinations? Non, nos prix sont justes et dépendent d'un certain nombre de critère d'importance comme les tarifs des contrôleurs aériens pour laisser voler nos avions ou les pot de vin aux forces de l'ordre locales.
+                Toute réclamation doit néanmoins se faire à l'adresse suivante c:corbeille@yahoo.com. Il y a possibilité de recevoir des coupons de réductions en cas de décès d'un proche lors d'un voyage précédent avec notre noble agence de voyage(sont exclues toute mort naturelle ou non naturelle). Au plaisir de ne jamais vous voir nous contacter " />
+                
+            </h:panelGrid>
+             <p:commandButton value="Réserver maintenant !" icon="pi pi-home" action="reservationpop" />
+            <h:panelGrid columns="2" cellpadding="10">
+                <p:graphicImage name="Hotels/hotel38.jpg" />
+                <h:outputText value="Hotel des requins"/>
+                <h:outputText value="Hahahaha! des garanties? Pourquoi pas des réductions sur certaines destinations? Non, nos prix sont justes et dépendent d'un certain nombre de critère d'importance comme les tarifs des contrôleurs aériens pour laisser voler nos avions ou les pot de vin aux forces de l'ordre locales.
+                Toute réclamation doit néanmoins se faire à l'adresse suivante c:corbeille@yahoo.com. Il y a possibilité de recevoir des coupons de réductions en cas de décès d'un proche lors d'un voyage précédent avec notre noble agence de voyage(sont exclues toute mort naturelle ou non naturelle). Au plaisir de ne jamais vous voir nous contacter " />
+                
+            </h:panelGrid>
+             <p:commandButton value="Réserver maintenant !" icon="pi pi-home" action="reservationpop" />
+        </p:tab>
+    </p:accordionPanel>    
+</h:body>
+
+</html>

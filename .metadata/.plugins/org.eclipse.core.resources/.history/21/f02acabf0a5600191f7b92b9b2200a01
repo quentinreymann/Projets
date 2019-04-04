@@ -1,0 +1,8 @@
+package com.TP2.entities;
+
+@Entity
+public class Entreprise implements Serializable{
+	
+	private static final long serialVersionUID = 1L;
+
+}

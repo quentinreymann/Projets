@@ -1,0 +1,5 @@
+package com.adaming.bean;
+
+public class DropdownView {
+
+}

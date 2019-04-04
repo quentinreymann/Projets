@@ -1,0 +1,59 @@
+package com.TP2.test;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+
+import com.TP2.entities.Employer;
+
+public class Main {
+	
+	public static SessionFactory factory;
+	public static void main(String[] args) {
+		
+				
+			factory = new Configuration().configure().buildSessionFactory();
+			
+			Session session = factory.openSession();
+			Transaction t = session.beginTransaction();
+
+			
+			
+			
+			
+			
+			
+			
+			
+
+			t.commit();
+	}
+	
+	private static void createemp(Session session, String nom, String prenom, int age) {
+		Employer e = new Employer();
+		e.setNom(nom);
+		e.setprenom(nom);
+		e.setage(nom);
+		session.persist(e);
+		
+	private static void create(Session session, String nom) {
+			Produit p = new Produit();
+			p.setNomProduit(nom);
+			session.persist(p);
+			
+	private static void create(Session session, String nom) {
+				Produit p = new Produit();
+				p.setNomProduit(nom);
+				session.persist(p);
+				
+	private static void create(Session session, String nom) {
+					Produit p = new Produit();
+					p.setNomProduit(nom);
+					session.persist(p);
+					
+	private static void create(Session session, String nom) {
+						Produit p = new Produit();
+						p.setNomProduit(nom);
+						session.persist(p);
+}

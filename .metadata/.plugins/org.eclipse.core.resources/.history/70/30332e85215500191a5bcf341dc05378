@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:b="http://bootsfaces.net/ui"
+    xmlns:f="http://xmlns.jcp.org/jsf/core"
+    xmlns:p="http://primefaces.org/ui" xmlns:a4j="http://richfaces.org/a4j"
+    xmlns:ui="http://java.sun.com/jsf/facelets">
+<h:head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>N et Q destinations</title>
+<style>               
+        .Bimage{background-image:url("resources/autre/voyage.jpg"); }   
+             
+</style>
+</h:head>
+<h:body styleClass="Bimage">
+<script type="text/javascript">
+    function handleLoginRequest(xhr, status, args) {
+        if(args.validationFailed || !args.loggedIn) {
+            PF('dlg').jq.effect("shake", {times:5}, 100);
+        }
+        else {
+            PF('dlg').hide();
+            $('#loginLink').fadeOut();
+        }
+    }
+</script>
+
+<div id="header">
+<p:breadCrumb align="center">
+    <p:menuitem value="Bob" url="http://localhost:8080/Magellan/" />
+    <p:menuitem value="Nos destinations " url="http://localhost:8080/Magellan/reservation.xhtml" />
+    <p:menuitem value="Qui sommes nous ? " url="http://localhost:8080/Magellan/qui.xhtml" />
+    <p:menuitem value="Comment nous contacter " url="http://localhost:8080/Magellan/contact.xhtml" />
+ </p:breadCrumb>
+ </div>
+<br /><br />
+<p:contentFlow value="#{imagesViews.images}" var="image">
+    <p:graphicImage name="destinations/#{image}" styleClass="content" />
+    <div class="caption">#{image}</div>
+</p:contentFlow>
+<h:form id="form">
+
+</h:form>
+ 
+<p:megaMenu  style="margin-top:20px">
+    <p:submenu label="France" icon="pi pi-check">
+        <p:column>
+            <p:submenu label="Paris">
+                <p:menuitem id="ce" value="Hotel des Champs-élysées" url="http://localhost:8080/Magellan/reservationpop.xhtml" target="_blank" return="1"/>
+                <p:menuitem value="Hotel Matignon" url="http://localhost:8080/Magellan/reservationpop.xhtml" target="_blank" />
+            </p:submenu>
+            <p:submenu label="Strasbourg">
+                <p:menuitem value="Hotel de la Cathédrale" url="http://localhost:8080/Magellan/reservationpop.xhtml" target="_blank" />
+                <p:menuitem value="Hotel de la Petite France" url="http://localhost:8080/Magellan/reservationpop.xhtml" target="_blank" />
+                <p:menuitem value="Hotel de la NeuStadt" url="http://localhost:8080/Magellan/reservationpop.xhtml" target="_blank" />
+            </p:submenu>
+        </p:column>
+ 
+        <p:column>
+            <p:submenu label="Marseille">
+                <p:menuitem value="Hotel du Vieux port" url="http://localhost:8080/Magellan/reservationpop.xhtml" target="_blank" />
+                <p:menuitem value="Hotel de la Cannebière" url="http://localhost:8080/Magellan/reservationpop.xhtml" target="_blank" />
+            </p:submenu>
+            <p:submenu label="Biarritz">
+                <p:menuitem value="Hotel de la mer" url="http://localhost:8080/Magellan/reservationpop.xhtml" target="_blank" />
+                <p:menuitem value="Hotel du surf" url="http://localhost:8080/Magellan/reservationpop.xhtml" target="_blank" />
+            </p:submenu>
+        </p:column>
+ 
+        <p:column>
+            <p:graphicImage name="autre/hotelParis.jpg" width="200"/>
+            <p:graphicImage name="autre/hotelStrasbourg.jpg" width="200"/>
+        </p:column>
+    </p:submenu>
+ 
+    <p:submenu label="Egypte" icon="pi pi-file">
+ 
+        <p:column>
+            <p:submenu label="Le Caire">
+                <p:menuitem value="Hotel des pyramides" url="http://localhost:8080/Magellan/reservationpop.xhtml" target="_blank" />
+                <p:menuitem value="Hotel du Sphinx" url="http://localhost:8080/Magellan/reservationpop.xhtml" target="_blank" />
+            </p:submenu>
+            <p:submenu label="Alexandrie">
+                <p:menuitem value="Hotel du phare" url="http://localhost:8080/Magellan/reservationpop.xhtml" target="_blank" />
+                <p:menuitem value="Hotel de la Bibliothèque" url="http://localhost:8080/Magellan/reservationpop.xhtml" target="_blank" />
+            </p:submenu>
+        </p:column>
+ 
+        <p:column>
+            <p:graphicImage name="autre/hotelEgypte.jpg" width="200"/>
+            <p:graphicImage name="autre/hotelEgypte2.jpg" width="200"/>
+        </p:column>
+    </p:submenu>
+ 
+    <p:submenu label="USA" icon="pi pi-pencil">
+        <p:column>
+            <p:submenu label="New-York">
+                <p:menuitem value="Hotel de la Statue de la liberté" url="http://localhost:8080/Magellan/reservationpop.xhtml" target="_blank" />
+                <p:menuitem value="Hotel des Twins Towers" url="http://localhost:8080/Magellan/reservationpop.xhtml" target="_blank" />
+            </p:submenu>
+            <p:submenu label="San Francisco">
+                <p:menuitem value="Hotel du pont" url="http://localhost:8080/Magellan/reservationpop.xhtml" target="_blank" />
+                <p:menuitem value="Hotel de la pente" url="http://localhost:8080/Magellan/reservationpop.xhtml" target="_blank" />
+                <p:menuitem value="Hotel d'alcatraz" url="http://localhost:8080/Magellan/reservationpop.xhtml" target="_blank" />
+            </p:submenu>
+        </p:column>
+         <p:column>
+            <p:submenu label="Miami">
+                <p:menuitem value="Hotel de la plage" url="http://localhost:8080/Magellan/reservationpop.xhtml" target="_blank" />
+                <p:menuitem value="Hotel des caraibes" url="http://localhost:8080/Magellan/reservationpop.xhtml" target="_blank" />
+            </p:submenu>
+        </p:column>
+        <p:column>
+            <p:graphicImage name="autre/HotelNewyork.jpg" width="200"/>
+            <p:graphicImage name="autre/hotelSan.jpg" width="200"/>
+        </p:column>
+ 
+    </p:submenu>
+ 
+    <p:submenu label="Japon" icon="pi pi-briefcase">
+        <p:column>
+            <p:submenu label="Tokyo">
+                <p:menuitem value="Love Hotel" url="http://localhost:8080/Magellan/reservationpop.xhtml" target="_blank" />
+                <p:menuitem value="Hotel bulle" url="http://localhost:8080/Magellan/reservationpop.xhtml" target="_blank" />
+                <p:menuitem value="Hotel du Samurai" url="http://localhost:8080/Magellan/reservationpop.xhtml" target="_blank" />
+            </p:submenu>
+            <p:submenu label="Kyoto">
+                <p:menuitem value="Hotel de l'empereur" url="http://localhost:8080/Magellan/reservationpop.xhtml" target="_blank" />
+                <p:menuitem value="Hotel du palais" url="http://localhost:8080/Magellan/reservationpop.xhtml" target="_blank" />
+                <p:menuitem value="Hotel du Dojo" url="http://localhost:8080/Magellan/reservationpop.xhtml" target="_blank" />
+            </p:submenu>
+            </p:column>
+            <p:column>
+            <p:submenu label="Fukushima">
+                <p:menuitem value="Hotel de la fin du monde" url="http://localhost:8080/Magellan/reservationpop.xhtml" target="_blank" />
+                <p:menuitem value="Hotel phosphorescent" url="http://localhost:8080/Magellan/reservationpop.xhtml" target="_blank" />
+                <p:menuitem value="Hotel du Tsunami" url="http://localhost:8080/Magellan/reservationpop.xhtml" target="_blank" />
+            </p:submenu>
+        </p:column>
+        <p:column>
+            <p:graphicImage name="autre/HotelJapon1.jpg" width="200"/>
+            <p:graphicImage name="autre/HotelJapon2.jpg" width="200"/>
+        </p:column>
+
+    </p:submenu>
+    
+        <p:submenu label="Australie" icon="pi pi-briefcase">
+        <p:column>
+            <p:submenu label="Melbourne">
+                <p:menuitem value="Hotel de la mairie" url="http://localhost:8080/Magellan/reservationpop.xhtml" target="_blank" />
+                <p:menuitem value="Hotel des kangourous" url="http://localhost:8080/Magellan/reservationpop.xhtml" target="_blank" />
+                <p:menuitem value="Hotel du koala" url="http://localhost:8080/Magellan/reservationpop.xhtml" target="_blank" />
+            </p:submenu>
+            <p:submenu label="Canberra">
+                <p:menuitem value="Hotel du parlement" url="http://localhost:8080/Magellan/reservationpop.xhtml" target="_blank" />
+                <p:menuitem value="Hotel de la reine" url="http://localhost:8080/Magellan/reservationpop.xhtml" target="_blank" />
+                <p:menuitem value="Hotel des aborigènes" url="http://localhost:8080/Magellan/reservationpop.xhtml" target="_blank" />
+            </p:submenu>
+            </p:column>
+                  <p:column>
+            <p:submenu label="Sydney">
+                <p:menuitem value="Hotel du théatre" url="http://localhost:8080/Magellan/reservationpop.xhtml" target="_blank" />
+                <p:menuitem value="Hotel de la baie" url="http://localhost:8080/Magellan/reservationpop.xhtml" target="_blank" />
+                <p:menuitem value="Hotel des requins" url="http://localhost:8080/Magellan/reservationpop.xhtml" target="_blank" />
+            </p:submenu>
+        </p:column>
+
+        <p:column>
+            <p:graphicImage name="autre/hotelaustralie1.jpg" width="200"/>
+            <p:graphicImage name="autre/hotelaustralie2.jpg" width="200"/>
+        </p:column>
+
+    </p:submenu>
+ 
+    <p:menuitem value="Quit" url="http://google.fr" icon="pi pi-times" />
+</p:megaMenu>
+<a href="http://localhost:8080/Magellan/reserver.xhtml">Réserver maintenant !</a>
+
+<p:commandButton value="France" action="#{CountryService.France}"/>
+
+
+
+<center><p:commandButton value="Rechercher" action="#{paysBean.validationVille()}" /></center>
+<p:tab title="On the sea Dubrovnik Hotel" rendered = "#{hotelBean.city == 'San Francisco'}">
+            <h:panelGrid columns="2" cellpadding="10">
+                <p:graphicImage name="demo/images/godfather/godfather3.jpg" />
+                <h:outputText value="Aller OL" />
+            </h:panelGrid>
+        </p:tab>
+
+</h:body>
+</html>

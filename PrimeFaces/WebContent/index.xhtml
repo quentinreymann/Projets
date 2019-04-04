@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE xsl:stylesheet [ <!ENTITY times "&#8855;"> ]>
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:b="http://bootsfaces.net/ui"
+    xmlns:f="http://xmlns.jcp.org/jsf/core"
+    xmlns:p="http://primefaces.org/ui" xmlns:a4j="http://richfaces.org/a4j"
+    xmlns:ui="http://java.sun.com/jsf/facelets">
+ 
+    <h:head>  
+      
+    <title>JSF 2.2 Hello World</title> 
+       
+    </h:head>
+      
+      
+    <h:body bgcolor="white"> 
+       
+    <h:form id="jsfexample">
+	<p:panelGrid columns="2">
+		<f:facet name="header">  
+               Basic PanelGrid  
+          </f:facet>
+		<h:outputLabel for="key" value="Enter key" />
+		<p:inputText id="key" value="#{manager.key}" />
+
+		<h:outputLabel for="value" value="Enter value" />
+		<p:inputText id="value" value="#{manager.value}" />
+
+		<p:commandButton action="#{manager.save}" update="mydata"
+			value="Save" icon="ui-icon-check" style="margin:0" />
+	<p:commandButton action="#{manager.clear}" update="mydata"
+		value="Delete" icon="ui-icon-cancel" style="margin:0" />
+
+		<h:messages />
+
+
+	</p:panelGrid>
+
+	<p:dataTable value="#{manager.cacheList}" var="item" id="mydata"
+		selectionMode="single" selection="#{manager.selectedProp}"
+		rowKey="#{item.key}">
+		<p:column>
+			<f:facet name="header">Key</f:facet>
+			<h:outputText value="#{item.key}" />
+		</p:column>
+		<p:column>
+			<f:facet name="header">Value</f:facet>
+			<h:outputText value="#{item.value}" />
+		</p:column>
+	</p:dataTable>
+</h:form>
+ 
+     
+    </h:body> 
+
+</html>

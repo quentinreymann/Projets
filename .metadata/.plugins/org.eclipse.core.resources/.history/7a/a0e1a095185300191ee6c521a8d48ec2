@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:b="http://bootsfaces.net/ui"
+    xmlns:f="http://xmlns.jcp.org/jsf/core"
+    xmlns:p="http://primefaces.org/ui" xmlns:a4j="http://richfaces.org/a4j"
+    xmlns:ui="http://java.sun.com/jsf/facelets">
+<h:head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>Comment nous contacter</title>
+</h:head>
+<h:body>
+
+<div id="header">
+<p:breadCrumb align="center">
+    <p:menuitem value="Bob" url="http://localhost:8080/Magellan/acceuil.xhtml" />
+    <p:menuitem value="Nos destinations " url="http://localhost:8080/Magellan/reservation.xhtml" />
+    <p:menuitem value="Qui sommes nous ? " url="http://localhost:8080/Magellan/qui.xhtml" />
+    <p:menuitem value="Comment nous contacter " url="http://localhost:8080/Magellan/contact.xhtml" />
+ </p:breadCrumb>
+ </div>
+<p align="left" style="color:blue"><a href="https://www.facebook.com/quentin.reymann"><img src="fb.png" width="85" height="70" alt="fb"></a></p>
+<p align="right"style="color:blue"><a href="https://fr.linkedin.com/in/quentin-reymann-a5878a132"><img src="link.jpg" width="85" height="70" alt="fb"></a></p>
+<p align="left" ><a href="mailto:quentin.reymann67@gmail.com"><img src="mail.jpg" width="85" height="70" alt="fb"></a></p>
+<p align="center"style="color:blue">+(33) 633878346 </p>
+</h:body>
+</html>

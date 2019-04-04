@@ -1,0 +1,12 @@
+package TablePerClass;
+
+public class employe {
+	
+	@Id
+	@GeneratedValue(strategy=GenerationType.TABLE)
+	private int idEmploye;
+	private String nom;
+	private String prenom;
+	private int age;
+
+}

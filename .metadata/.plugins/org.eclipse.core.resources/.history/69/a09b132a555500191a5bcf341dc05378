@@ -1,0 +1,20 @@
+package embedded;
+
+import java.io.Serializable;
+
+import javax.persistence.Column;
+import javax.persistence.Embeddable;
+
+@Embeddable
+public class adresse implements Serializable{
+	
+	@Column
+	private String rue;
+	
+	@Column
+	private String ville;
+	
+	@Column 
+	private int codePostale;
+
+}

@@ -1,0 +1,6 @@
+package com.TP2.entities;
+
+@Entity
+public class Employer {
+
+}

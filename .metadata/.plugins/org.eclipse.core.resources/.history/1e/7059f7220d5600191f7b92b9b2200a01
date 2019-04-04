@@ -1,0 +1,112 @@
+package com.TP2.entities;
+
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.Embedded;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
+
+import com.TP2.entities.Adresse;
+import com.TP2.entities.Projet;
+import com.TP2.entities.Equipe;
+
+
+@Entity
+public class Employer implements Serializable{
+	
+	private static final long serialVersionUID = 1L;
+	
+	
+
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@Column(name="id_emp" , nullable = false)
+	private int id;
+	
+	@Column(name="nom_emp",length=10)
+    private String nom;
+    
+    @Column(name="prenom_emp", length=10)
+    private String prenom;
+    
+    @Column(nullable=false)
+    private int age;
+    
+    @Embedded
+	Adresse adresse;
+    
+    @ManyToMany(cascade=CascadeType.ALL)
+	@JoinTable(
+			name="EMP_PROJ" , 
+			joinColumns=@JoinColumn(name="emp_id" ,referencedColumnName="id_emp"),
+		    inverseJoinColumns=@JoinColumn(name="proj_id" ,referencedColumnName="id_proj"))
+    List<Projet> projets=new ArrayList<Projet>();
+    
+    @ManyToOne
+	@JoinColumn(name="id_equipe" )
+	private Equipe equipe;
+
+    @ManyToOne
+	@JoinColumn(name="id_entreprise" )
+	private Entreprise entreprise;
+    
+	public Employer() {
+
+	}
+
+	public Employer(int id, String nom, String prenom, int age) {
+		super();
+		this.id = id;
+		this.nom = nom;
+		this.prenom = prenom;
+		this.age = age;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getNom() {
+		return nom;
+	}
+
+	public void setNom(String nom) {
+		this.nom = nom;
+	}
+
+	public String getPrenom() {
+		return prenom;
+	}
+
+	public void setPrenom(String prenom) {
+		this.prenom = prenom;
+	}
+
+	public int getAge() {
+		return age;
+	}
+
+	public void setAge(int age) {
+		this.age = age;
+	}
+
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
+    
+    
+}

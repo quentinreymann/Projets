@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:b="http://bootsfaces.net/ui"
+    xmlns:f="http://xmlns.jcp.org/jsf/core"
+    xmlns:p="http://primefaces.org/ui" xmlns:a4j="http://richfaces.org/a4j"
+    xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<h:head>
+<title>Qui sommes nous</title>
+
+<style>               
+        .Bimage{background-image:url("resources/autre/grece.jpg"); }        
+</style>
+</h:head>
+
+<h:body styleClass="Bimage">
+ 
+<h3 style="color:#FAFAD2" align="center"><font size="7"><font face="Verdana"> N and Q : Des origines à vos destinations de rêve</font></font></h3>
+
+<div id="header" style="filter:alpha(opacity=75); opacity:0.75;">
+<p:breadCrumb align="center">
+    <p:menuitem value="Bob" url="http://localhost:8080/Magellan/acceuil.xhtml" />
+    <p:menuitem value="Nos destinations " url="http://localhost:8080/Magellan/reservation.xhtml" />
+    <p:menuitem value="Qui sommes nous ? " url="http://localhost:8080/Magellan/qui.xhtml" />
+    <p:menuitem value="Comment nous contacter " url="http://localhost:8080/Magellan/contact.xhtml" />
+ </p:breadCrumb>
+ </div>
+<br /><br /><br />
+<p:accordionPanel style="filter:alpha(opacity=85); opacity:0.85;" multiple="true" >
+        <p:tab title="Qui sommes nous ?">
+            <h:panelGrid columns="2" cellpadding="10">
+                <p:graphicImage name="autre/logoAgence.jpg" />
+                <h:outputText
+                    value="Notre agence naît officiellement le 28 mars 2019 lors d'un défi lancé par notre formateur commun. Après une agence commune lancée par Quentin REYMANN et Nicolas L à Lyon, notre groupe a très vite pris de l'ampleur et est devenu le premier réseau d'agence de voyages 
+                    lyonnais avec deux agences réparties dans deux quartiers de la capitale des Gaules. C'est une agence reconnue par ses pairs et louées par ses clients pour son efficacité et son manque total de pitié concernant les abus et les réclamations. En agences de voyages mais surtout 
+                    sur internet, le groupe propose un nombre important de destinations malgré sa jeunesse. Jeunesse compensée par son dynamisme et l'envie de faire découvrir à ses clients des lieux connus comme des lieux insolites. Nous serons votre première et votre dernière agence de voyage!" />
+            </h:panelGrid>
+        </p:tab>
+        <p:tab title="Notre avenir">
+            <h:panelGrid columns="2" cellpadding="10">
+                <p:graphicImage name="autre/space.jpg" />
+                <h:outputText value="Le futur de notre groupe passe d'abord par une multiplication des destinations proposées et surtout par leur étrangeté croissante, en effet, en 2020 sont attendues les premières destinations dites de zone FFA (free for all) telles que l'Irak, la Syrie, le Yemen, le Brésil ou l'Ukraine.
+                Il sera aussi possible à l'horizon 2025 de partir en vacances autour de la Terre ou sur la base lunaire chinoise pour des prix toujours aussi modestes que ceux proposés actuellement.  " />
+            </h:panelGrid>
+        </p:tab>
+        <p:tab title="Nos garanties">
+            <h:panelGrid columns="2" cellpadding="10">
+                <p:graphicImage name="autre/plainte.jpg" />
+                <h:outputText value="Hahahaha! des garanties? Pourquoi pas des réductions sur certaines destinations? Non, nos prix sont justes et dépendent d'un certain nombre de critère d'importance comme les tarifs des contrôleurs aériens pour laisser voler nos avions ou les pot de vin aux forces de l'ordre locales.
+                Toute réclamation doit néanmoins se faire à l'adresse suivante c:corbeille@yahoo.com. Il y a possibilité de recevoir des coupons de réductions en cas de décès d'un proche lors d'un voyage précédent avec notre noble agence de voyage(sont exclues toute mort naturelle ou non naturelle). Au plaisir de ne jamais vous voir nous contacter " />
+            </h:panelGrid>
+        </p:tab>
+        <p:tab title="Informations légales">
+            <h:panelGrid columns="2" cellpadding="10">
+                <p:graphicImage name="autre/legal.jpg" />
+                <h:outputText value="Q and N travel : Société par action simplifiée au capital de 3.599.000 euros. Siège: 20 Boulevard Molière 69003 LYON. Immatriculée au RCS de LYON sous le numéro 689 189 483. TVA intracommunautaire: FR451865489612. N° Immatriculation: IM03110089. Garantie financière délivrée par Arnaque.cie PARIS. RCP T'ASPASD'BOL assurance contrat 000000000218951 " />
+            </h:panelGrid>
+        </p:tab>
+    </p:accordionPanel>
+
+</h:body>
+</html>
