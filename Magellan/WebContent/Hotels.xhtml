@@ -47,8 +47,7 @@
        <p:outputLabel for="retour" value="Retour:" />
         <p:calendar id="retour" value="#{calendarView.date3}" showOn="button" />
         <f:facet name="footer">
-                 <p:commandButton value="Reserver" update="growl" action="#{reservationBean.reserver}"
-                                 oncomplete="handleLoginRequest(xhr, status, args)" /> 
+                 <p:button outcome="confirmation.xhtml" value="Réserver" align="center" />
             </f:facet>
     </h:panelGrid>
          
